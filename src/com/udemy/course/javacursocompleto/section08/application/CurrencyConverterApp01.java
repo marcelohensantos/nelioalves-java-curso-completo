@@ -1,4 +1,4 @@
-package com.udemy.course.javacursocompleto.section8.application;
+package com.udemy.course.javacursocompleto.section08.application;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -14,6 +14,6 @@ public class CurrencyConverterApp01 {
         System.out.print("how many dollars will be bought? ");
         double amount = in.nextDouble();
 
-        System.out.printf("amount to be paid in reais: %.2f", com.udemy.course.javacursocompleto.section8.entities.CurrencyConverter.converter(dollar, amount));
+        System.out.printf("amount to be paid in reais: %.2f", com.udemy.course.javacursocompleto.section08.entities.CurrencyConverter.converter(dollar, amount));
     }
 }

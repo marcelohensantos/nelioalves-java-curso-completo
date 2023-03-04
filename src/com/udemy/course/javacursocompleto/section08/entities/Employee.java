@@ -1,4 +1,4 @@
-package com.udemy.course.javacursocompleto.section8.entities;
+package com.udemy.course.javacursocompleto.section08.entities;
 
 public class Employee {
     public String name;

@@ -1,4 +1,4 @@
-package com.udemy.course.javacursocompleto.section9.entities;
+package com.udemy.course.javacursocompleto.section09.entities;
 
 public class Product {
 

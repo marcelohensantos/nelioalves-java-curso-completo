@@ -1,4 +1,4 @@
-package com.udemy.course.javacursocompleto.section8.application;
+package com.udemy.course.javacursocompleto.section08.application;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -8,7 +8,7 @@ public class EmployeeApp01 {
         Locale.setDefault(Locale.US);
 
         Scanner sc = new Scanner(System.in);
-        com.udemy.course.javacursocompleto.section8.entities.Employee employee = new com.udemy.course.javacursocompleto.section8.entities.Employee();
+        com.udemy.course.javacursocompleto.section08.entities.Employee employee = new com.udemy.course.javacursocompleto.section08.entities.Employee();
 
         System.out.print("name: ");
         employee.name = sc.nextLine();

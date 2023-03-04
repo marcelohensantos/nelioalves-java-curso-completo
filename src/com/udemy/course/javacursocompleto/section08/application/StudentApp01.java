@@ -1,6 +1,6 @@
-package com.udemy.course.javacursocompleto.section8.application;
+package com.udemy.course.javacursocompleto.section08.application;
 
-import com.udemy.course.javacursocompleto.section8.entities.Student;
+import com.udemy.course.javacursocompleto.section08.entities.Student;
 
 import java.util.Locale;
 import java.util.Scanner;
