@@ -1,5 +1,7 @@
 package com.udemy.course.javacursocompleto.section15.model.entities;
 
+import com.udemy.course.javacursocompleto.section15.exception.DomainException;
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Period;
@@ -12,6 +14,9 @@ public class Reservation {
     public static final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public Reservation(Integer roomNumber, LocalDate checkIn, LocalDate checkOut) {
+        if (checkOut.isBefore(checkIn))
+            throw new DomainException("check-out date must be after check-in date");
+
         this.roomNumber = roomNumber;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
@@ -21,14 +26,15 @@ public class Reservation {
         return Period.between(checkIn, checkOut).getDays();
     }
 
-    public String updateDates(LocalDate checkIn, LocalDate checkOut) {
+    public void updateDates(LocalDate checkIn, LocalDate checkOut) {
         LocalDate now = LocalDate.now();
-        if (checkIn.isBefore(now) || checkOut.isBefore(now)) return "reservation dates for update must be future dates";
-        if (checkOut.isBefore(checkIn)) return "check-out date must be after check-in date";
+        if (checkIn.isBefore(now) || checkOut.isBefore(now))
+            throw new DomainException("reservation dates for update must be future dates");
+        if (checkOut.isBefore(checkIn))
+            throw new DomainException("check-out date must be after check-in date");
 
         this.checkIn = checkIn;
         this.checkOut = checkOut;
-        return null;
     }
 
     public Integer getRoomNumber() {
